@@ -8,49 +8,49 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Composer action
-        uses: mileschou/composer-action@master
+        uses: nebionik/composer-action@master
         with:
           args: --help
   v1:
     runs-on: ubuntu-latest
     steps:
       - name: Composer action
-        uses: mileschou/composer-action/v1@master
+        uses: nebionik/composer-action/v1@master
         with:
           args: --help
   php71:
     runs-on: ubuntu-latest
     steps:
       - name: Composer Action test
-        uses: mileschou/composer-action/7.1@master
+        uses: nebionik/composer-action/7.1@master
         with:
           args: --help
   php72:
     runs-on: ubuntu-latest
     steps:
       - name: Composer Action install test
-        uses: mileschou/composer-action/7.2/install@master
+        uses: nebionik/composer-action/7.2/install@master
         with:
           args: --help
   php84:
     runs-on: ubuntu-latest
     steps:
       - name: Composer Action install test
-        uses: mileschou/composer-action/8.4/install@master
+        uses: nebionik/composer-action/8.4/install@master
         with:
           args: --help
   php85:
     runs-on: ubuntu-latest
     steps:
       - name: Composer Action install test
-        uses: mileschou/composer-action/8.5/install@master
+        uses: nebionik/composer-action/8.5/install@master
         with:
           args: --help
   php83_v1:
     runs-on: ubuntu-latest
     steps:
       - name: Composer Action install test
-        uses: mileschou/composer-action/8.3/v1@master
+        uses: nebionik/composer-action/8.3/v1@master
         with:
           args: --help
   php_version:
