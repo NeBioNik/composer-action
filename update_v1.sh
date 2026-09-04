@@ -31,7 +31,7 @@ for version in ${VERSIONS}; do
 
     mkdir -p ${version}/v1/install
     generated_warning > ${version}/v1/install/Dockerfile
-    echo "FROM ghcr.io/mileschou/composer:${version}-v1" >> ${version}/v1/install/Dockerfile
+    echo "FROM ghcr.io/mileschou/composer-action:${version}-v1" >> ${version}/v1/install/Dockerfile
     echo "" >> ${version}/v1/install/Dockerfile
     echo "CMD [\"install\"]" >> ${version}/v1/install/Dockerfile
 done
@@ -45,6 +45,6 @@ cp docker-entrypoint v1/docker-entrypoint
 
 mkdir -p v1/install
 generated_warning > v1/install/Dockerfile
-echo "FROM mileschou/composer:${LATEST_VERSION}-v1" >> v1/install/Dockerfile
+echo "FROM mileschou/composer-action:${LATEST_VERSION}-v1" >> v1/install/Dockerfile
 echo "" >> v1/install/Dockerfile
 echo "CMD [\"install\"]" >> v1/install/Dockerfile
