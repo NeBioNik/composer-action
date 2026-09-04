@@ -3,6 +3,6 @@
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
-FROM ghcr.io/mileschou/composer:8.4
+FROM ghcr.io/nebionik/composer-action:8.4
 
 CMD ["install"]

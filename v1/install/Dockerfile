@@ -3,6 +3,6 @@
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
-FROM mileschou/composer:8.3-v1
+FROM nebionik/composer-action:8.3-v1
 
 CMD ["install"]

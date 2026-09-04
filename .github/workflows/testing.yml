@@ -45,7 +45,7 @@ jobs:
       - name: Composer Action install test
         uses: nebionik/composer-action/8.5/install@master
         with:
-          args: --help
+          args: php -v
   php83_v1:
     runs-on: ubuntu-latest
     steps:
