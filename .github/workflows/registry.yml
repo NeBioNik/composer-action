@@ -17,9 +17,9 @@ jobs:
       - name: Build latest version and publish to GitHub Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
-          name: mileschou/composer
+          name: ${{ github.repository }}
           tags: "latest,8.5"
-          username: mileschou
+          username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: 8.5/Dockerfile
@@ -36,8 +36,8 @@ jobs:
       - name: Build PHP ${{ matrix.version }} and publish to GitHub Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
-          name: mileschou/composer:${{ matrix.version }}
-          username: mileschou
+          name: ${{ github.repository }}:${{ matrix.version }}
+          username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: ${{ matrix.version }}/Dockerfile
@@ -51,9 +51,9 @@ jobs:
       - name: Build latest version and publish to GitHub Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
-          name: mileschou/composer
+          name: ${{ github.repository }}
           tags: "v1,8.3-v1"
-          username: mileschou
+          username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: 8.3/v1/Dockerfile
@@ -70,8 +70,8 @@ jobs:
       - name: Build PHP ${{ matrix.version }} and publish to GitHub Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
-          name: mileschou/composer:${{ matrix.version }}-v1
-          username: mileschou
+          name: ${{ github.repository }}:${{ matrix.version }}-v1
+          username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: ${{ matrix.version }}/v1/Dockerfile
